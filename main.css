@@ -6,17 +6,19 @@ body{
     min-height: 500px;
     background-color: aquamarine;
     position: relative;
-    display:flex
+    display:flex;
 
 }
 .anoying_Dog{
     position: absolute;
     height: 100%;
     width: 100%;
+    background-color: khaki;
 }
 .anoying_Dog > marquee{
-    height: 100%;
+    height: inherit;
+    width: inherit;
 }
 .anoying_Dog > marquee > marquee > img{
-    max-width:88px;
+    width:88px;
 }
