@@ -2,18 +2,56 @@ body{
     padding: 0px;
     margin: 0px;
 }
-.landing{
-    min-height: 500px;
-    background-color: aquamarine;
-    position: relative;
-    display:flex;
 
+/* LANDING PAGE */
+.landing{
+    min-height: 600px;
+    background-color: #e4e1d8;  
+    position: relative;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
+#anoying_dog_sleeping{
+    position:absolute;
+    width: 110px;
+    right: 10%;
+    bottom: 0px;
+}
+#anoying_dog_rope{
+    position:absolute;
+    width: 80px;
+    left: 10%;
+    top: 0px;
+}
+
+.typing-text{
+    width: 15ch;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 15px solid #000;
+    font-size: 3em;
+    font-family: 'Press Start 2P', sans-serif;
+    animation: typing 2s steps(15), blink .5s step-end infinite alternate;
+}
+@keyframes typing{
+    from {
+        width:0;}
+    to{
+        width: 15ch;
+    }
+}
+@keyframes blink {
+    50%{
+        border-color: transparent;
+    }
+}
+
 .anoying_Dog{
     position: absolute;
     height: 100%;
     width: 100%;
-    background-color: khaki;
 }
 .anoying_Dog > marquee{
     height: inherit;
