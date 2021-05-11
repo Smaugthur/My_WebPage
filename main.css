@@ -1,0 +1,22 @@
+body{
+    padding: 0px;
+    margin: 0px;
+}
+.landing{
+    min-height: 500px;
+    background-color: aquamarine;
+    position: relative;
+    display:flex
+
+}
+.anoying_Dog{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.anoying_Dog > marquee{
+    height: 100%;
+}
+.anoying_Dog > marquee > marquee > img{
+    max-width:88px;
+}
