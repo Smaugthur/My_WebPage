@@ -1,11 +1,17 @@
 body{
     padding: 0px;
     margin: 0px;
+    box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+  color: black;
 }
 
 /* LANDING PAGE */
 .landing{
-    min-height: 600px;
+    min-height: 100vh;
     background-color: #e4e1d8;  
     position: relative;
 
@@ -13,6 +19,38 @@ body{
     justify-content: center;
     align-items: center;
 }
+
+.static_text{
+    width: 3ch;
+    padding: 1ch;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 3em;
+    font-family: 'Press Start 2P', sans-serif;
+}
+
+.typing-text{
+    width: 12ch;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 15px solid #000;
+    font-size: 3em;
+    font-family: 'Press Start 2P', sans-serif;
+    animation: typing 3.5s steps(12) , blink .5s step-end infinite alternate;
+}
+@keyframes typing{
+    from {
+        width:0;}
+    to{
+        width: 12ch;
+    }
+}
+@keyframes blink {
+    50%{
+        border-color: transparent;
+    }
+}
+
 #anoying_dog_sleeping{
     position:absolute;
     width: 110px;
@@ -26,28 +64,6 @@ body{
     top: 0px;
 }
 
-.typing-text{
-    width: 15ch;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 15px solid #000;
-    font-size: 3em;
-    font-family: 'Press Start 2P', sans-serif;
-    animation: typing 2s steps(15), blink .5s step-end infinite alternate;
-}
-@keyframes typing{
-    from {
-        width:0;}
-    to{
-        width: 15ch;
-    }
-}
-@keyframes blink {
-    50%{
-        border-color: transparent;
-    }
-}
-
 .anoying_Dog{
     position: absolute;
     height: 100%;
@@ -59,4 +75,56 @@ body{
 }
 .anoying_Dog > marquee > marquee > img{
     width:88px;
+}
+
+/* PARALLAX SECTION */
+.parallax{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    background: url('./img/Link_background.jpg') top/cover no-repeat fixed;
+}
+.parallax > img{
+    height: 100%;
+    object-fit: contain;
+    pointer-events: none;
+}
+.parallax div{
+    font-family: 'Rubik Mono One', sans-serif;
+    font-size: 23px;
+    margin : 10%;
+}
+
+/* CONTENT SECTION */
+.content{
+    padding: 10vh 40px 0px;
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Mulish', Arial, Helvetica, sans-serif ;
+    background-color: #fff;
+}
+.content > div{
+    padding: 30px;
+    margin-right: 20px;
+    border-radius: 15px;
+    background-color: #e4e1d8;
+    box-shadow: 10px 10px grey;
+}
+#test > p{
+    margin-bottom: 50px;
+}
+#test > a{
+    color: #fff;
+    background: #2647DE;
+    padding: 1em;
+    border-radius: 15px;
+    transition: background-color 0.5s;
+}
+#test > a:hover{
+    color: #fff;
+    background: #6079e9;
 }
