@@ -50,6 +50,11 @@ a{
         border-color: transparent;
     }
 }
+@keyframes blinkingText {
+    80%{
+        color: transparent;
+    }
+}
 
 #anoying_dog_sleeping{
     position:absolute;
@@ -101,30 +106,105 @@ a{
 
 /* CONTENT SECTION */
 .content{
-    padding: 10vh 40px 0px;
+    padding: 8vh 40px 0px;
     display: flex;
-    justify-content: space-around;
+    flex-wrap: nowrap;
+    justify-content: space-between;
     font-family: 'Mulish', Arial, Helvetica, sans-serif ;
     background-color: #fff;
 }
 .content > div{
     padding: 30px;
+    position: relative;
     margin-right: 20px;
     border-radius: 15px;
     background-color: #e4e1d8;
     box-shadow: 10px 10px grey;
 }
-#test > p{
+#text > :nth-child(2){
     margin-bottom: 50px;
 }
-#test > a{
+#text > a{
     color: #fff;
+    position: absolute;
+    bottom: 10%;
     background: #2647DE;
+    margin-top: 50px;
     padding: 1em;
     border-radius: 15px;
     transition: background-color 0.5s;
 }
-#test > a:hover{
+#text > a:hover{
     color: #fff;
     background: #6079e9;
+}
+.block2 > :first-child{
+    width: 40%;
+}
+.block2 > :nth-child(2){
+    width: 60%;
+}
+.block2 div img{
+    width: 100%;
+}
+.block3 > :first-child{
+    width: 60%;
+}
+.block3 > :first-child > table{
+    width: 100%;
+    margin-top: 10%;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 1.25rem;
+}
+.block3 > :nth-child(2){
+    width: 40%;
+}
+.block3 div img{
+    width: 100%;
+}
+footer{
+    padding: 2%;
+    margin-top: 10vh;
+    min-height: 50vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-family: 'Press Start 2P', Arial, Helvetica, sans-serif;
+    color: white;
+}
+footer div{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+footer div span{
+    position: absolute;
+    bottom: 0;
+    left: -2ch;
+}
+footer div div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer div i{
+    margin-bottom: 10px;
+    color: white;
+    font-size: 4rem;
+}
+footer div a{
+    font-family: 'Press Start 2P', Arial, Helvetica, sans-serif;
+    color: white;
+}
+footer img{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.blinkingText{
+    animation: blinkingText 1s step-end infinite alternate;
 }
